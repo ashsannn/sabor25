@@ -1,22 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web App</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="nav-landing">
+    <!-- Hamburger Icon -->
+    <button 
+      id="hamburger-icon" 
+      onclick="toggleMenu()" 
+      aria-expanded="false" 
+      aria-controls="hamburger-menu" 
+      aria-label="Open menu">
+      &#9776;
+    </button>
   
-  <body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu-content" id="hamburger-menu">
+      <button id="close-menu" onclick="toggleMenu()" aria-label="Close menu">
+       &#10005; <!-- Closing icon -->
+      </button>
+      <ul>
+        <li><a href="index.html"><span class="menu-text">home</span></a></li>
+        <li><a href="index.html"><span class="menu-text">saved - coming soon!</span></a></li>
+      </ul>
+    </div>
+  
+    <!-- Overlay for the menu background -->
+    <div class="overlay" id="overlay"></div>
+  </nav>
+  
 
-    <ul>
-      <li><a href="final-project/fp-code/index.html">Final Project</a></li>
+  <!-- Main content -->
+  <div class="landing">
 
+    <header class="container-header">
+      <h1 div class="container-logo">
+          <img src="images/sabor-logo0.png" alt="Sabor.ai Logo" id="sabor-logo">        
+      </h1>
+        <div class="sub-header">
+        <p class="sub-text">Recipes made for you, with you</p>
+      </div>
+    <div class="container-one">
+        <label for="recipe-input">
+          <span class="instruction-text"> 1. Start with a recipe</span>
+        </label>
 
-      <li><a href="solution-hw0/">Homework Assignment 0</a></li>
-      <li><a href="solution-hw1/product_gallery.html">Homework Assignment 1</a></li>
-      <li><a href="solution-hw2/product_gallery.html">Homework Assignment 2</a></li>
-      <li><a href="solution-hw3/product_gallery.html">Homework Assignment 3</a></li>
-      <li><a href="solution-hw4/product_gallery.html">Homework Assignment 4</a></li>
-      <li><a href="solution-hw5/product_gallery.html">Homework Assignment 5</a></li>
-      <li><a href="solution-hw6/product_gallery.html">Homework Assignment 6</a></li>
-    </ul>
+        <div class="container-input">
+          <input type="recipe" id="recipe-input">
+          <img id="search-button" src="images/search-button.png" alt="Search icon" aria-label="Search"
+          data-redirect="recipe1.html" tabindex="0">
+        </div>
+    </div>
 
-  </body>
+    <div class="container-instruction">
+  <p class="instruction-text">You can say something like...</p>
+
+        <button class="button-main" data-redirect="recipe1.html">
+            Ecuadorian Lentil Soup With 30g Protein
+            <img id="go-arrow" src="images/arrow.svg" alt="arrow icon" />
+        </button>
+
+        <button class="button-main">Indian inspired meal, dairy free, under 500 calories 
+            <img id="go-arrow" src="images/arrow.svg" alt="arrow icon"/>
+        </button>
+
+        <button class="button-main">Gluten-free banana bread
+          <img id="go-arrow" src="images/arrow.svg" alt="arrow icon"/>
+        </button>
+    </div>
+
+    <div class="container-instruction">
+  <p class="instruction-text"> 2. Then, tweak!</p>
+  <p class="instruction-text">Make your perfect recipe with the ability to:</p>
+        <div id="container-instruction-details">
+            <p class="instruction-text"> Interact with Ingredients</p>
+            <p class="instruction-text">Modify serving size</p>
+            <p class="instruction-text">Visualize nutrition facts</p>
+        </div>
+
+        <div class="container-instruction-3">
+            <p class="instruction-text">3. Save!</p>
+            <p class="instruction-text">Save your recipe and come back to it whenever you’d like for even more tweaking.</p>
+        </div>
+    </div>
+
+  <script src="js/home.js"></script>
+
+</body>
 </html>
